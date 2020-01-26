@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Abel|Noto+Sans+JP:400,700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700|Orbitron:400,700&display=swap&subset=japanese" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="scss/reset.css">
+    <link rel="stylesheet" href="scss/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="js/jquery.bgswitcher.js"></script>
+    <title>aonisai.log</title>
+    <script>
+        //start alert
+
+        function getValue(idname){
+            var hoge = document.getElementById(idname).value;
+            alert(hoge +"さん、来てくれてありがとう！また来てね！");
+        }
+        //end alert
+
+        // start_bgSwitcher
+        jQuery(function($) {
+            $('.bg-slider').bgSwitcher({
+                images: ['img/north-4756774_1920.jpg','img/universe-2742113_1920.jpg','img/wallpaper-4106667_1920.jpg'], // 切り替える背景画像を指定
+            });
+        });
+        // end_bgSwitcher
+
+        // start_smoothScroll
+        $(function(){
+            $('a[href^="#"]').click(function(){
+                var speed = 500;
+                var href= $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top;
+                $("html, body").animate({scrollTop:position}, speed, "swing");
+                return false;
+            });
+        });
+        // end_smoothScroll
+
+        //start_fadeIn
+        $(function(){
+            $(window).scroll(function (){
+                $('.fadeIn').each(function(){
+                    var elemPos = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    if (scroll > elemPos - windowHeight + 250){
+                        $(this).addClass('scrollin');
+                    }
+                });
+            });
+        });
+        //end_fadeIn
+    </script>
+</head>
+<body>
+    <header class="header__pc__only">
+        <ul class="header__pc__only__inner">
+            <li><a href="#top"><img src="img/logo.png" alt=""></a></li>
+            <li><a href="#prof">PROF</a></li>
+            <li><a href="#skill">SKILL</a></li>
+            <li><a href="#work">WORK</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </header>
+
+    <header class="header__sp__only">
+        <ul class="header__sp__only__inner">
+            <li><a href="#top"><img src="img/logo.png" alt=""></a></li>
+            <li><a href="#prof">PROF</a></li>
+            <li><a href="#skill">SKILL</a></li>
+            <li><a href="#work">WORK</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </header>
+
+    <article>
+        <div class="article__inner">
+            <div class="article__inner__header" id="top">
+                <div class="bg-slider">
+                    <h1 class="bg-slider__title">aonisai.log</h1>
+                </div>
+            </div>
+            <div class="article__inner__content" id="prof">
+                <h2 class="article__inner__content__ttl">PROFILE</h2>
+                <div class="article__inner__content__profbox">
+                    <div class="article__inner__content__profbox__name">
+                        <p class="article__inner__content__profbox__name__img"><img src="img/prof_02.png" alt=""></p>
+                        <h3 class="article__inner__content__profbox__name__ttl"><span>NAME / </span>aonisai<br><span>HOBBY / </span>gaming , anime<br><span>LIVE / </span>OSAKA</h3>
+                    </div>
+                    <p class="article__inner__content__profbox__txt">Thanks , for visited aonisai.log!<br>My name is aonisai , Web creater.<br>I'm studying programming to become a Web programmer.<br>Please have a good stay!</p>
+                </div>
+            </div><!-- /article__inner__content[#prof] -->
+
+            <div class="article__inner__content" id="skill">
+                <h2 class="article__inner__content__ttl">SKILL</h2>
+                <div class="article__inner__content__skillbox">
+                    <p class="article__inner__content__skillbox__item"><i class="fab fa-html5 fa-5x"></i><span>HTML5</span></p>
+                    <p class="article__inner__content__skillbox__item"><i class="fab fa-css3-alt fa-5x"></i><span>CSS3</span></p>
+                    <p class="article__inner__content__skillbox__item"><img src="img/ruby.png" alt=""><span>Ruby</span></p>
+                    <p class="article__inner__content__skillbox__item"><img src="img/rails.png" alt=""><span>Ruby on Rails</span></p>
+                </div>
+            </div><!-- /article__inner__content[#skill] -->
+
+            <div class="article__inner__content" id="work">
+                <h2 class="article__inner__content__ttl">WORK</h2>
+                <div class="article__inner__content__workbox">
+                    <div class="article__inner__content__workbox__card fadeIn">
+                        <a href="" class="article__inner__content__workbox__card__item">
+                            <figure class="article__inner__content__workbox__card__item__img"><img src="img/home-office-336378_640.jpg" alt=""></figure>
+                            <h3 class="article__inner__content__workbox__card__item__ttl">work01</h3>
+                            <p class="article__inner__content__workbox__card__item__txt">coding</p>
+                        </a>
+                    </div>
+                    <div class="article__inner__content__workbox__card fadeIn">
+                        <a href="" class="article__inner__content__workbox__card__item">
+                            <figure class="article__inner__content__workbox__card__item__img"><img src="img/clouds-1845517_640.jpg" alt=""></figure>
+                            <h3 class="article__inner__content__workbox__card__item__ttl">work02</h3>
+                            <p class="article__inner__content__workbox__card__item__txt">Game is My Life</p>
+                        </a>
+                    </div>
+                    <div class="article__inner__content__workbox__card fadeIn">
+                        <a href="" class="article__inner__content__workbox__card__item">
+                            <figure class="article__inner__content__workbox__card__item__img"><img src="img/blacksmith-2740128_640.jpg" alt=""></figure>
+                            <h3 class="article__inner__content__workbox__card__item__ttl">work03</h3>
+                            <p class="article__inner__content__workbox__card__item__txt">so good..</p>
+                        </a>
+                    </div>
+                </div>
+            </div><!-- /article__inner__content[#work] -->
+
+            <div class="article__inner__content" id="contact">
+                <h2 class="article__inner__content__ttl">CONTACT</h2>
+                <div class="article__inner__content__contactbox">
+                    <form action="#" method="post" class="article__inner__content__contactbox__form">
+                        <div class="article__inner__content__contactbox__form__item">
+                            <label for="category" class="article__inner__content__contactbox__form__item__ttl">CATEGORY</label>
+                            <select name="category" id="category">
+                                <option value="選ぶのじゃ！！">選ぶのじゃ！！</option>
+                                <option value="WEB">WEB</option>
+                                <option value="GAME">GAME</option>
+                                <option value="ANIME">ANIME</option>
+                            </select>
+                        </div>
+                        <div class="article__inner__content__contactbox__form__item">
+                            <label for="name">NAME</label>
+                            <input type="text" id="name" placeholder="name">
+                        </div>
+                        <div class="article__inner__content__contactbox__form__item">
+                            <label for="email">E-MAIL</label>
+                            <input type="text" id="email" placeholder="sample@apex.com">
+                        </div>
+                        <div class="article__inner__content__contactbox__form__item">
+                            <label for="content">CONTENT</label>
+                            <textarea name="content" id="content" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="article__inner__content__contactbox__form__item">
+                            <button type="button" value="ボタン" onclick="getValue('name');">CLICK HERE!</button>
+                        </div>
+                    </form>
+                </div>
+            </div><!-- /article__inner__content[#contact] -->
+
+            <footer class="article__inner__footer">
+                <h2 class="article__inner__footer__ttl">©️ ALL RIGHT RESERVE AONISAI.LOG</h2>
+            </footer>
+        </div><!-- /article__inner -->
+    </article>
+
+
+</body>
+</html>

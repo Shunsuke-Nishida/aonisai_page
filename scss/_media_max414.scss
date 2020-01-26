@@ -1,0 +1,71 @@
+/*===== @media screen and (max-width: 414px;) =====*/
+
+@media screen and (max-width: 414px){
+
+    /*===== content__common =====*/
+
+    .article__inner__content{
+        padding: 150px 5vw;
+        .article__inner__content__ttl{
+            font-size: 7vw;
+        }
+    }
+
+    /*===== /content__common =====*/
+
+    /*===== prof =====*/
+
+    .article__inner__content__profbox{
+        .article__inner__content__profbox__name{
+            display: block;
+            .article__inner__content__profbox__name__img{
+                img{
+                    width: 35%;
+                }
+            }
+            .article__inner__content__profbox__name__ttl{
+                font-size: 3vw;
+                width: 70%;
+                margin: 0 auto;
+                span{
+                    font-size: 1.5vw;
+                }
+            }
+        }
+        .article__inner__content__profbox__txt{
+            padding: 5vw 0;
+            width: 100%;
+            &:before,&:after {
+                content:'';
+                width: 5vw;
+                height: 5vw;
+            }
+        }
+    }
+
+    /*===== /prof =====*/
+
+
+    /*===== skill =====*/
+
+    .article__inner__content__skillbox{
+        .article__inner__content__skillbox__item {
+            width: 50%;
+            font-size: 4.5vw;
+            &:nth-of-type(3),&:nth-of-type(4){
+                margin-top: 12vw;
+            }
+            span{
+                font-size: 4vw;
+                margin-top: 3vw;
+            }
+            img{
+                width: 45%;
+            }
+        }
+    }
+
+    /*===== /skill =====*/
+}
+
+/*===== /@media screen and (max-width: 414px;) =====*/

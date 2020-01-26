@@ -1,0 +1,158 @@
+/*===== @media screen and (max-width: 1024px;) =====*/
+
+@media screen and (max-width: 1024px){
+
+    /*===== header =====*/
+
+    .header__pc__only{
+        display: none;
+    }
+
+    .header__sp__only{
+        display: flex;
+    }
+
+    /*===== /header =====*/
+
+
+    article{
+        width: 100%;
+        padding: 10vw 0 0;
+    }
+
+
+    /*===== first_view =====*/
+
+    .bg-slider {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .bg-slider__title{
+        font-size: 10vw;
+    }
+
+    /*===== /first_view =====*/
+
+
+    /*===== content__common =====*/
+
+    .article__inner__content{
+        padding: 150px 5vw;
+        .article__inner__content__ttl{
+            font-size: 5vw;
+        }
+    }
+
+    /*===== /content__common =====*/
+
+
+    /*===== prof =====*/
+    .article__inner__content__profbox{
+        .article__inner__content__profbox__name{
+            @include __flex(center);
+            .article__inner__content__profbox__name__ttl{
+                font-size: 2.5vw;
+                span{
+                    font-size: 1.5vw;
+                }
+            }
+        }
+    }
+
+    /*===== /prof =====*/
+
+
+    /*===== skill =====*/
+
+    .article__inner__content__skillbox{
+        @include __flex(space-around);
+        flex-wrap: wrap;
+        margin-top: 6.67vw;
+        .article__inner__content__skillbox__item {
+            width: 50%;
+            font-size: 3vw;
+            &:nth-of-type(3),&:nth-of-type(4){
+                margin-top: 6vw;
+            }
+            span{
+                font-size: 2.34vw;
+                margin-top: 2vw;
+            }
+            img{
+                width: 30%;
+            }
+        }
+    }
+
+    /*===== /skill =====*/
+
+    /*===== work =====*/
+
+    .article__inner__content__workbox{
+        display: block;
+        margin-top: 6.67vw;
+        .article__inner__content__workbox__card{
+            width: 60%;
+            margin: 50px auto 0;
+            .article__inner__content__workbox__card__item{
+                color: #1f1e1e;
+                .article__inner__content__workbox__card__item__ttl{
+                    font-size: 4vw;
+                    padding: 3vw 0 2vw;
+                }
+                .article__inner__content__workbox__card__item__txt{
+                    padding: 0 0 3vw;
+                    font-size: 2vw;
+                }
+            }
+        }
+    }
+
+    /*===== /work =====*/
+
+    /*===== contact =====*/
+
+    #contact{
+        background: rgba(241, 180, 46, 0.842);
+        color: #fff;
+    }
+
+    .article__inner__content__contactbox{
+        margin-top: 6.67vw;
+        text-align: center;
+        .article__inner__content__contactbox__form__item{
+            font-size: 4vw;
+            margin-top: 2vw;
+            &:nth-of-type(1){
+                margin-top: 0;
+            }
+            label{
+                display: block;
+            }
+        }
+    }
+
+    input,textarea{
+        width: 60%;
+        font-size: 2vw;
+    }
+
+    button{
+        width: 30%;
+        font-size: 2vw;
+    }
+
+    select{
+        width: 30%;
+        font-size: 2vw;
+        padding: 0.6vw;
+        margin-top: 0.7vw;
+    }
+
+    /*===== /contact =====*/
+}
+
+
+
+/*===== @media screen and (max-width: 1024px;) =====*/
