@@ -24,6 +24,7 @@
   transition-delay: 550ms; }
 
 /*===== /fadeIn =====*/
+/*===== common =====*/
 html {
   font-family: 'Orbitron','Abel', 'Noto Sans JP',"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", cursive;
   background: #fff;
@@ -38,6 +39,7 @@ a {
 img {
   max-width: 100%; }
 
+/*===== /common =====*/
 /*===== header =====*/
 .header__pc__only {
   width: 15%;
